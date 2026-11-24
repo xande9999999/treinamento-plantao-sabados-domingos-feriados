@@ -1,14 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Treinamento: Plantão aos Sábados, Domingos e Feriados</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treinamento: Plantão aos Sábados, Domingos e Feriados</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy-deep:rgb(10,30,63);--navy:rgb(20,33,61);--red:rgb(193,18,31);--red-bright:rgb(214,40,57);--white:#FFF;--bg-soft:rgb(246,249,255);--bg-card:rgb(244,247,251);--blue:rgb(43,108,176);--blue-mid:rgb(2,132,199);--green:rgb(22,121,74);--orange:rgb(194,120,3);--text-dark:rgb(51,65,85);--text-muted:rgb(91,107,130);--border:rgb(219,227,238);--shadow:0 4px 24px rgba(10,30,63,.08);--shadow-sm:0 2px 12px rgba(10,30,63,.06)}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--white);color:var(--text-dark);line-height:1.65;font-size:16px}
+.hero-wrap{max-width:920px;margin:2.5rem auto 0;padding:0 1.25rem}.hero{background:linear-gradient(135deg,rgb(10,30,63) 0%,rgb(20,33,61) 45%,rgb(80,20,40) 100%);border-radius:20px;padding:2.5rem 2rem;color:#fff;box-shadow:0 12px 40px rgba(10,30,63,.25);position:relative;overflow:hidden}.hero-badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:.35rem 1rem;border-radius:50px;font-size:.8rem;margin-bottom:1rem}.hero h1{font-size:1.85rem;font-weight:800;margin-bottom:.65rem;background:linear-gradient(90deg,#93c5fd,#c4b5fd,#f87171);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero p{font-size:.98rem;color:rgba(226,232,240,.95);max-width:520px}
+.topics-nav{max-width:920px;margin:1.75rem auto 0;padding:0 1.25rem}.topics-nav-title{font-size:.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;margin-bottom:.75rem}.topics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.65rem}.topic-box{display:flex;flex-direction:column;gap:.25rem;padding:.85rem .95rem;background:#fff;border:1.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text-dark);box-shadow:var(--shadow-sm)}.topic-num{font-size:.7rem;font-weight:700;color:var(--red)}.topic-label{font-size:.82rem;font-weight:600;color:var(--navy-deep)}
+main{max-width:920px;margin:0 auto;padding:2.5rem 1.25rem 3rem}section{margin-bottom:3.5rem;scroll-margin-top:1.5rem}h2{font-size:1.45rem;font-weight:700;color:var(--navy-deep);margin-bottom:1.25rem}h2 .num{color:var(--red);margin-right:.35rem}h3{font-size:1.1rem;font-weight:600;color:var(--navy);margin:1.75rem 0 .85rem}p{margin-bottom:1rem}
+.card{background:#fff;border-radius:14px;padding:1.5rem 1.6rem;margin:1.35rem 0;box-shadow:var(--shadow);border:1px solid var(--border)}.card-highlight{border-left:4px solid var(--red)}.card-warning{border-left:4px solid var(--red-bright);background:#fff8f8}.card-success{border-left:4px solid var(--green);background:#f0fdf6}.card-info{border-left:4px solid var(--blue-mid);background:var(--bg-soft)}.card-orange{border-left:4px solid var(--orange);background:#fffbeb}
+.analogy{background:linear-gradient(135deg,rgb(246,249,255),rgb(237,244,255));border-radius:14px;padding:1.4rem 1.6rem;margin:1.35rem 0;display:flex;gap:1.1rem;border:1px solid rgb(200,220,245)}.tip{background:#f0fdf6;border:1px solid #b6e5c9;border-radius:12px;padding:1.1rem 1.35rem;margin:1.35rem 0;display:flex;gap:.85rem}.tech-box{background:var(--bg-card);border-left:4px solid var(--blue);border-radius:0 12px 12px 0;padding:1.15rem 1.4rem;margin:1.35rem 0}
+.shift-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.25rem 0}.shift-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.25rem 1.35rem}.shift-card .code{display:inline-block;background:var(--navy-deep);color:#fff;font-weight:700;font-size:.85rem;padding:.25rem .7rem;border-radius:6px;margin-bottom:.75rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.15rem;margin:1.5rem 0}.use-card{background:#fff;border-radius:14px;padding:1.5rem 1.25rem;text-align:center;box-shadow:var(--shadow);border:1px solid var(--border)}.use-card .emoji{font-size:2.2rem;margin-bottom:.7rem}.region-tag{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .75rem;border-radius:50px;font-size:.82rem;font-weight:600}.region-red{background:#fee2e2;color:#991b1b}.region-blue{background:#dbeafe;color:#1e40af}.region-green{background:#dcfce7;color:#166534}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.dot-red{background:#dc2626}.dot-blue{background:#2563eb}.dot-green{background:#16a34a}
+ul,ol{margin-left:1.35rem;margin-bottom:1rem}li{margin-bottom:.45rem}footer{text-align:center;padding:2.5rem 1.25rem;color:var(--text-muted);font-size:.875rem;border-top:1px solid var(--border);background:var(--bg-soft)}
+@media(max-width:640px){.hero h1{font-size:1.45rem}.topics-grid{grid-template-columns:repeat(2,1fr)}.grid,.shift-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-<p>Placeholder - will update</p>
-</body>
-</html>
+<div class="hero-wrap"><div class="hero"><div class="hero-content">
+<div class="hero-badge">Treinamento interno • Ateky • Suporte / Atendimento</div>
+<h1>Plantão aos Sábados,<br>Domingos e Feriados</h1>
+<p>Material prático para plantonistas: horários, monitoramento da rede, agendamentos e regiões de atendimento.</p>
+</div></div></div>
+
+<div class="topics-nav"><div class="topics-nav-title">Selecione o tópico</div>
+<div class="topics-grid">
+<a class="topic-box" href="#objetivo"><span class="topic-num">Tópico 1</span><span class="topic-label">Objetivo</span></a>
+<a class="topic-box" href="#horarios"><span class="topic-num">Tópico 2</span><span class="topic-label">Horários</span></a>
+<a class="topic-box" href="#monitoramento"><span class="topic-num">Tópico 3</span><span class="topic-label">Monitoramento</span></a>
+<a class="topic-box" href="#agendamentos"><span class="topic-num">Tópico 4</span><span class="topic-label">Agendamentos</span></a>
+<a class="topic-box" href="#regioes"><span class="topic-num">Tópico 5</span><span class="topic-label">Regiões</span></a>
+<a class="topic-box" href="#checklist"><span class="topic-num">Tópico 6</span><span class="topic-label">Checklist prático</span></a>
+<a class="topic-box" href="#resumo"><span class="topic-num">Tópico 7</span><span class="topic-label">Resumo final</span></a>
+</div></div>
+
+<main>
+<section id="objetivo"><h2><span class="num">1.</span> Objetivo deste treinamento</h2>
+<p>Garantir que todo plantonista saiba exatamente <strong>o que fazer, quando fazer e como registrar</strong> durante o plantão de sábado, domingo e feriados — com clareza e segurança.</p>
+<div class="analogy"><div style="font-size:1.9rem">🎯</div><div><strong>Meta principal</strong><br>Ao final deste material você deve conseguir:
+<ul style="margin-top:.5rem;margin-bottom:0"><li>Seguir os horários corretos sem atraso após intervalo</li><li>Monitorar a rede e escalar eventos importantes</li><li>Agendar visitas na região e no técnico certos</li><li>Encerrar o plantão sem deixar chamadas perdidas</li></ul></div></div></section>
+
+<section id="horarios"><h2><span class="num">2.</span> Horários do Plantão</h2>
+<p>Em <strong>sábado, domingo e feriados</strong> trabalhamos com <strong>3 técnicos</strong> em escalas diferentes (A1, B1 e D1). O padrão de horários é o mesmo para todos esses dias.</p>
+<h3>Sábado, Domingo e Feriados</h3>
+<div class="shift-grid">
+<div class="shift-card"><div class="code">A1</div><div><strong>Início:</strong> 08:00</div><div><strong>Intervalo:</strong> 12:00 → retorna 13:30</div><div><strong>Fim:</strong> 18:30</div></div>
+<div class="shift-card"><div class="code">B1</div><div><strong>Início:</strong> 09:30</div><div><strong>Intervalo:</strong> 13:30 → retorna 15:00</div><div><strong>Fim:</strong> 20:00</div></div>
+<div class="shift-card"><div class="code">D1</div><div><strong>Início:</strong> 11:30</div><div><strong>Intervalo:</strong> 15:30 → retorna 17:00</div><div><strong>Fim:</strong> 22:00</div></div>
+</div>
+<div class="card card-warning"><p style="margin-bottom:.5rem"><strong>⚠️ Regras importantes de horário</strong></p>
+<ul style="margin-bottom:0"><li><strong>Não pode ocorrer atraso após os intervalos.</strong></li><li>Se trabalhar com mais de 1 plantonista, os atendimentos devem ser <strong>repassados normalmente</strong> entre a equipe.</li><li>Ao deslogar da central, <strong>não deixe nenhuma chamada perdida</strong>. Se o fluxo estiver alto e não for possível retornar todas, entre em contato imediatamente com o supervisor responsável.</li></ul></div>
+<div class="tip"><div>💡</div><div><strong>Dica prática:</strong> Programe um alarme 5 minutos antes do fim do intervalo. A pontualidade no retorno é um dos pontos mais observados no plantão.</div></div></section>
+
+<section id="monitoramento"><h2><span class="num">3.</span> Monitoramento da Rede</h2>
+<p>O plantonista é responsável por <strong>cuidar e informar o sobreaviso (CGR)</strong> sempre que ocorrer um evento na rede durante o horário de plantão.</p>
+<div class="card card-info"><p style="margin-bottom:.6rem"><strong>O que são eventos que precisam de atenção imediata?</strong></p>
+<p style="margin-bottom:0">São situações que impactam o uso de <strong>muitos clientes</strong> ao mesmo tempo. Usamos os alertas do <strong>Zabbix</strong> e os gráficos do <strong>Grafana</strong> para monitorar.</p></div>
+<h3>Exemplos de eventos críticos</h3>
+<ul><li>No final de cada plantão, o maior nível (<strong>N2 ou N3</strong>) é responsável pela rede. Se houver algum problema ou rompimento em andamento, deve ser comunicado ao time da <strong>AW</strong>.</li>
+<li>Rompimento de fibra que pare uma caixa de distribuição ou mais (no Zabbix o alerta de PON só aparece quando a PON para).</li>
+<li>Parada de roteadores que fornecem CGNAT para vários clientes (RB de NAT, concentradores, POPs de rádio).</li>
+<li>Problemas em links de fornecimento de internet que impactam os clientes.</li>
+<li>Outros casos de grande impacto.</li></ul>
+<div class="tech-box"><strong>Ferramentas de monitoramento</strong><br>Usamos principalmente:
+<ul style="margin-top:.5rem;margin-bottom:0"><li><strong>Zabbix</strong> → alertas em tempo real</li><li><strong>Grafana</strong> → gráficos e visão geral da rede</li></ul></div>
+<h3>Sábado à noite (ao deslogar)</h3>
+<div class="card card-highlight"><p style="margin-bottom:0">Ao deslogar no sábado à noite, <strong>envie uma mensagem no grupo do suporte</strong> informando que:<br>• Todas as ligações perdidas foram retornadas<br>• A rede está sem nenhuma anomalia</p></div>
+<h3>Domingo e Feriado – Checklist das 08h</h3>
+<p>Todo domingo e feriado, às <strong>8h da manhã</strong>, o plantonista deve:</p>
+<ol><li>Analisar a rede em busca de anomalias (Zabbix + Grafana)</li><li>Testar a central e verificar se está com a programação de domingo (plantão começa às 8h)</li><li>Testar o upchat na fila do suporte técnico e confirmar se está encaminhando a mensagem de que o atendimento é apenas pela central de telefonia</li></ol>
+<div class="card card-orange"><p style="margin-bottom:.5rem"><strong>⚠️ Tratamento de alertas do Zabbix</strong></p>
+<ul style="margin-bottom:0"><li>Com alertas de <strong>PONs ou POPs</strong> → tentar contato já às 8h</li><li>Em <strong>condomínios</strong>: analisar as ONUs em alerta. Se o alarme no UNM for <em>link loss</em>, deve ser ligado na hora</li><li>Alarme de <strong>eletricidade</strong>: entrar em contato se estiver parado há 1 hora ou mais</li></ul></div></section>
+
+<section id="agendamentos"><h2><span class="num">4.</span> Agendamentos</h2>
+<h3>Reincidência Técnica</h3>
+<div class="card card-warning"><p style="margin-bottom:0">Quando a manutenção for algum caso de <strong>REINCIDÊNCIA TÉCNICA</strong>, <strong>não abrimos no plantão</strong>. É aberto <strong>MANUTENÇÃO ALTA</strong> e descrito na O.S. que seria reincidência técnica, porém aberto alta devido ao plantão. Anotamos a equipe ou técnico responsável pela reincidência técnica na O.S. e agendamos a manutenção para as equipes plantonistas.</p></div>
+<h3>Cliente sem conexão – Sábado à tarde</h3>
+<div class="card"><p style="margin-bottom:0">Quando o cliente está sem conexão e temos plantão na região:</p>
+<ul style="margin-top:.5rem;margin-bottom:0"><li>Confirme qual técnico está de plantão naquela região</li><li>Coloque na agenda desse técnico</li><li>Avise que ele tem mais uma visita em aberto</li><li>Até as <strong>18:00</strong> quem agenda é o <strong>setor operacional</strong></li></ul></div>
+<h3>Cliente sem conexão – Domingos e Feriados</h3>
+<div class="card"><p style="margin-bottom:0">Mesma lógica do sábado:</p>
+<ul style="margin-top:.5rem;margin-bottom:0"><li>Confirme o técnico de plantão da região</li><li>Coloque na agenda dele e avise sobre a visita em aberto</li></ul></div>
+<h3>Prestação de Serviço</h3>
+<div class="tech-box">Nos casos em que o técnico entra em contato para abrir uma prestação (para não gerar atendimento técnico ao cliente), podemos abrir a prestação de serviço pelo processo de <strong>reabrir visita</strong> e depois mandar para prestação de serviço.</div></section>
+
+<section id="regioes"><h2><span class="num">5.</span> Regiões dos Clientes</h2>
+<p>Os agendamentos devem ser feitos <strong>sempre de acordo com o técnico escalado para o dia e a região</strong>. Antes de agendar, verifique qual técnico está de plantão e se a cidade do cliente pertence à região dele.</p>
+<div class="grid">
+<div class="use-card" style="text-align:left"><div style="margin-bottom:.75rem"><span class="region-tag region-red"><span class="dot dot-red"></span> Tubarão</span></div><h4 style="margin-bottom:.5rem">Região Vermelha</h4><p style="font-size:.88rem;color:var(--text-dark)">Tubarão, Treze de Maio, Jaguaruna, Sangão, Campo Bom, Esplanada, Laguna, Camacho, Capivari de Baixo, Pedrinhas, Gravatal, Armazém, Pescaria Brava</p></div>
+<div class="use-card" style="text-align:left"><div style="margin-bottom:.75rem"><span class="region-tag region-blue"><span class="dot dot-blue"></span> Urussanga</span></div><h4 style="margin-bottom:.5rem">Região Azul</h4><p style="font-size:.88rem;color:var(--text-dark)">Urussanga, Criciúma, Içara, Cocal do Sul, Morro da Fumaça, Siderópolis, Balneário Rincão, Azambuja, São João, Rio Vargedo</p></div>
+<div class="use-card" style="text-align:left"><div style="margin-bottom:.75rem"><span class="region-tag region-green"><span class="dot dot-green"></span> São Ludgero</span></div><h4 style="margin-bottom:.5rem">Região Verde</h4><p style="font-size:.88rem;color:var(--text-dark)">São Ludgero, Orleans, Lauro Muller, Pedras Grandes, Braço do Norte, Grão Pará, Rio Fortuna</p></div>
+</div>
+<div class="tip"><div>💡</div><div><strong>Regra de ouro:</strong> Nunca agende um cliente de uma região para o técnico de outra região. Confirme sempre a escala do dia + a cidade do cliente.</div></div></section>
+
+<section id="checklist"><h2><span class="num">6.</span> Checklist prático do Plantão</h2>
+<h3>No início do plantão</h3>
+<div class="card"><ul style="margin-bottom:0"><li>Verificar se está logado corretamente na central</li><li>Conferir a programação da central (especialmente domingo/feriado às 8h)</li><li>Testar o upchat da fila de suporte técnico</li><li>Abrir Zabbix e Grafana e analisar a rede</li><li>Verificar se há alertas de PON, POP, link loss ou energia</li></ul></div>
+<h3>Durante o plantão</h3>
+<div class="card"><ul style="margin-bottom:0"><li>Atender e retornar todas as chamadas possíveis</li><li>Monitorar eventos de grande impacto e acionar o CGR quando necessário</li><li>Agendar visitas apenas no técnico e região corretos</li><li>Quando for <strong>REINCIDÊNCIA TÉCNICA</strong>: abrir como <strong>MANUTENÇÃO ALTA</strong>, descrever na O.S., anotar a equipe/técnico responsável e agendar para as equipes plantonistas</li><li><strong>Verificar as manutenções altas que não estão agendadas e agendar para os técnicos plantonistas</strong></li><li>Respeitar rigorosamente os horários de intervalo e retorno</li></ul></div>
+<h3>Ao final do plantão</h3>
+<div class="card card-highlight"><ul style="margin-bottom:0"><li>Retornar todas as ligações perdidas (ou avisar o supervisor se não for possível)</li><li>Confirmar que a rede está sem anomalias</li><li>No sábado à noite: enviar mensagem no grupo do suporte com o status final</li><li>Deslogar da central apenas após essas conferências</li></ul></div></section>
+
+<section id="resumo"><h2><span class="num">7.</span> Resumo final para fixar</h2>
+<div class="grid">
+<div class="use-card"><div class="emoji">⏰</div><h4>Horários</h4><p>3 escalas (A1, B1, D1). Sem atraso após intervalo. Sem chamada perdida ao deslogar.</p></div>
+<div class="use-card"><div class="emoji">📡</div><h4>Monitoramento</h4><p>Zabbix + Grafana. Eventos de grande impacto → avisar CGR rápido. N2/N3 comunica AW se houver problema em andamento.</p></div>
+<div class="use-card"><div class="emoji">📅</div><h4>Agendamentos</h4><p>Sempre no técnico e região certos. Reincidência técnica → MANUTENÇÃO ALTA + anotar responsável.</p></div>
+<div class="use-card"><div class="emoji">🗺️</div><h4>Regiões</h4><p>Vermelho = Tubarão · Azul = Urussanga · Verde = São Ludgero</p></div>
+</div>
+<div class="card card-success"><p style="margin-bottom:0"><strong>Frase para lembrar:</strong><br>“Pontualidade no horário, olhos na rede, agenda na região certa e zero chamada perdida no final do plantão.”</p></div></section>
+</main>
+<footer><p><strong>Márcia Treinamentos • Ateky</strong></p><p>Plantão aos Sábados, Domingos e Feriados • 2026</p><p style="margin-top:.75rem;font-size:.8rem">Baseado nos procedimentos oficiais do Centro de Soluções</p></footer>
+<script>
+document.querySelectorAll('.topic-box').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});});
+</script>
+</body></html>
